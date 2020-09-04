@@ -20,6 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="{% static 'css/themify-icons.css' %}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <style>
         .cc-selector input{
             margin:0;padding:0;
@@ -85,15 +86,16 @@
             background-image:url({% static 'img/profile/influencer.png' %});
         }
 
+        
     </style>
+    {% block styles %}
+        {% endblock %}
 </head>
 
 <body style="background: linear-gradient(to right, #5e72e4, #8965e0);">
     <!--   Big container   -->
-    <a href="/" class="btn" style="position:absolute; left: 20px; top:20px; color: indigo; font-size:16px; background-color:ivory; font-weight: 300;" >
-        <i class="ti-arrow-left"></i>
-                Return Home
-    </a>
+    {% block home %}
+    {% endblock %}
 <div class="container" id="app">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
